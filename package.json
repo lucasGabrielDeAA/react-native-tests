@@ -1,0 +1,38 @@
+{
+  "name": "TestsApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "lint": "eslint app/",
+    "lint:fix": "eslint app/ --fix"
+  },
+  "dependencies": {
+    "babel-preset-react-native": "^4.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "react": "16.5.0",
+    "react-dom": "^16.5.2",
+    "react-native": "0.57.2"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "react-test-renderer": "16.5.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/__tests__/setup.js"
+    ],
+    "testMatch": [
+      "<rootDir>/__tests__/**/?(*.)(spec|test).js"
+    ]
+  }
+}
